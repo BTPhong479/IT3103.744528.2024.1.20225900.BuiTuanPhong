@@ -1,3 +1,6 @@
+package AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
@@ -6,6 +9,7 @@ public class DigitalVideoDisc {
     private float cost;
     private int id;
     private static int nbDigitalVideoDisc = 0;
+
 
 
     public DigitalVideoDisc(String title){
@@ -52,12 +56,11 @@ public class DigitalVideoDisc {
 
     public float getCost(){
         return cost;
-    } 
+    }
+
     public int getId(){
         return id;
     }
-
-
 
     public String toString(){
         return "DVD - " +title+ " - "+ category+ " - "+ director+ " - "+ length+ ": "+ cost+"$";
@@ -66,4 +69,5 @@ public class DigitalVideoDisc {
     public boolean isMatch(String title){
         return title.equals(this.title);
     }
+    
 }
