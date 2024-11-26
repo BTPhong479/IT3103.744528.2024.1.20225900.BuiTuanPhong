@@ -1,3 +1,9 @@
+package AimsProject.src.hust.soict.dsai.aims.cart.Cart;
+
+import AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+
+// Phải ghi đầy đủ hêt cả tên class. OK xong
+
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 21;
 
@@ -60,7 +66,7 @@ public class Cart {
     }
 
 
-    /*  public void addDigitalVideoDisc(DigitalVideoDisc... discs){
+ /*    public void addDigitalVideoDisc(DigitalVideoDisc... discs){
         
         for(DigitalVideoDisc disc:discs){
 
@@ -81,7 +87,7 @@ public class Cart {
         }
     }
     }
-    */
+*/
 
     public float totalCost(){
         float sum = 0.0f;
@@ -120,6 +126,7 @@ public class Cart {
         System.out.println("Total cost: "+ totalCost());
         System.out.println("***************************************************");
     }
+
     public void searchId(int id){
         for(int i=1; i<=itemsOdered.length; i++){
             if(itemsOdered[i]!=null){
@@ -148,4 +155,6 @@ public class Cart {
             }
         }
     }
+
+
 }
