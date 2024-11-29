@@ -14,12 +14,13 @@ public class CartTest {
         cart.addDigitalVideoDisc(dvd3);
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 20f);
         cart.addDigitalVideoDisc(dvd4);
-
+        DigitalVideoDisc dvd5 = new DigitalVideoDisc("The film");
 
         System.out.println(dvd1.getId());
         
         System.out.println(dvd2.getId());
         System.out.println(dvd3.getId());
+        System.out.println(dvd5.getId());
 
 
 
