@@ -1,11 +1,10 @@
 package AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
-import AimsProject.src.hust.soict.dsai.aims.media.Media;
+import hust.soict.dsai.aims.media.Disc;
 
-public class DigitalVideoDisc extends Media{
+public class DigitalVideoDisc extends Disc{
     
-    private String director;
-    private int length;
+    
     
     private static int nbDigitalVideoDisc = 0;
 
@@ -25,31 +24,19 @@ public class DigitalVideoDisc extends Media{
     }
 
     public DigitalVideoDisc(String title, String category, String director, float cost){
-        this(title, category, cost);
-        this.director=director;
-        
+        super(title, category, director, cost);
+        super.setId(nbDigitalVideoDisc);
+        nbDigitalVideoDisc++;
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost){
-        this(title, category, director, cost);
-        this.length=length;
-        
+        super(title, category,director,length,cost);
+        super.setId(nbDigitalVideoDisc);
+        nbDigitalVideoDisc++;
     }
-
-    
-    
-
-    public String getDirector(){
-        return director;
-    } 
-    public int getLength(){
-        return length;
-    }
-
-    
 
     public String toString(){
-        return "DVD - " +super.getTitle()+ " - "+ super.getCategory()+ " - "+ director+ " - "+ length+ ": "+ super.getCost()+"$";
+        return "DVD - " +super.getTitle()+ " - "+ super.getCategory()+ " - "+ super.getDirector()+ " - "+ super.getLength()+ ": "+ super.getCost()+"$";
     }
 
     public boolean isMatch(String title){

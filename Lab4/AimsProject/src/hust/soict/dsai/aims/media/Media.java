@@ -17,7 +17,6 @@ public abstract  class Media {
     }
 
 
-
     public Media(String title, String category, float cost){
         this.title=title;
         this.category=category;
@@ -25,8 +24,6 @@ public abstract  class Media {
     }
 
     
-
-
 
     public int getId(){
         return id;
