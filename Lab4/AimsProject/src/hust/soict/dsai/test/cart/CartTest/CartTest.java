@@ -2,36 +2,49 @@ package AimsProject.src.hust.soict.dsai.test.cart.CartTest;
 
 import AimsProject.src.hust.soict.dsai.aims.cart.Cart.Cart;
 import AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+import AimsProject.src.hust.soict.dsai.aims.media.Book;
+import hust.soict.dsai.aims.media.CompactDisc;
+
 
 public class CartTest {
     public static void main(String args[]){
         Cart cart= new Cart();
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
-        cart.addDigitalVideoDisc(dvd1);
+        cart.addMedia(dvd1);
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star War", "Science Fiction", "George Lucas", 87, 24.95f);
-        cart.addDigitalVideoDisc(dvd2);
+        
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
-        cart.addDigitalVideoDisc(dvd3);
+        
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 20f);
-        cart.addDigitalVideoDisc(dvd4);
+        
         DigitalVideoDisc dvd5 = new DigitalVideoDisc("The film");
 
-        System.out.println(dvd1.getId());
+        cart.addMedia(dvd2);
+        cart.addMedia(dvd3);
+        cart.removeMedia(dvd3);
+        cart.removeMedia(dvd3);
+        cart.addMedia(dvd3);
+        cart.addMedia(dvd4);
+        cart.addMedia(dvd5);
         
-        System.out.println(dvd2.getId());
-        System.out.println(dvd3.getId());
-        System.out.println(dvd5.getId());
+
+        Book book1 = new Book("jehgfse","sdgfsdjf",10);
+        book1.addAuthor("BTPHONG");
+        book1.addAuthor("btphong");
+
+        cart.addMedia(book1);
 
 
+        CompactDisc cd1 =  new CompactDisc("jhgfsd", "sdfgsf", "djfgfdsjf", 36, 12, "jsdgfsj");
+        cart.addMedia(cd1);
 
 
+        System.out.println(cart.totalCost());
         cart.print();
-        cart.searchId(3);
 
-
+        cart.searchId(2);
         cart.searchTitle("The Lion King");
-
-
+        cart.searchTitle("jfgsjfjsfvs");
 
     }
     
