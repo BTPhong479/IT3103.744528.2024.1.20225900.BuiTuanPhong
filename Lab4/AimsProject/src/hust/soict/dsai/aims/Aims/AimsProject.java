@@ -2,6 +2,7 @@ package AimsProject.src.hust.soict.dsai.aims.Aims;
 
 import AimsProject.src.hust.soict.dsai.aims.cart.Cart.Cart;
 import AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Playable;
 
 public class AimsProject{
     public static void main(String[] args){
@@ -40,6 +41,9 @@ public class AimsProject{
         System.out.println(a1.totalCost());
 
         a1.print();
+
+        dvd1.play();
+        dvd2.play();
     }
 }
 
