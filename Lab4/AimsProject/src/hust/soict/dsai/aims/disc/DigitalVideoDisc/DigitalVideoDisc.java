@@ -1,11 +1,10 @@
 package AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 import hust.soict.dsai.aims.media.Disc;
+import hust.soict.dsai.aims.media.Playable;
 
-public class DigitalVideoDisc extends Disc{
-    
-    
-    
+public class DigitalVideoDisc extends Disc implements Playable{
+
     private static int nbDigitalVideoDisc = 0;
 
     
@@ -43,4 +42,8 @@ public class DigitalVideoDisc extends Disc{
         return title.equals(super.getTitle());
     }
     
+    public void play(){
+        System.out.println("Playing DVD: "+ super.getTitle());
+        System.out.println("DVD length: "+ super.getLength());
+    }
 }

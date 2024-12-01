@@ -2,10 +2,11 @@ package hust.soict.dsai.aims.media;
 
 import java.util.ArrayList;
 import java.util.List;
+import hust.soict.dsai.aims.media.Playable;
 
-public class CompactDisc extends Disc{
+
+public class CompactDisc extends Disc implements Playable{
     private String artist;
-
     private List<Track> tracks = new ArrayList<Track>();
 
 
@@ -39,7 +40,13 @@ public class CompactDisc extends Disc{
     }
 
     
+    public void play(){
+        System.out.println("Artist: "+getArtist());
+        for(Track item : tracks){
+            item.play();
+        }
 
+    }
 
 
 
