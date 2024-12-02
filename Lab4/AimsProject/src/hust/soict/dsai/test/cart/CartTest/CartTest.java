@@ -1,8 +1,8 @@
-package AimsProject.src.hust.soict.dsai.test.cart.CartTest;
+package hust.soict.dsai.test.cart.CartTest;
 
-import AimsProject.src.hust.soict.dsai.aims.cart.Cart.Cart;
-import AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
-import AimsProject.src.hust.soict.dsai.aims.media.Book;
+import hust.soict.dsai.aims.cart.Cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.CompactDisc;
 
 
@@ -40,11 +40,14 @@ public class CartTest {
 
 
         System.out.println(cart.totalCost());
+        
         cart.print();
 
         cart.searchId(2);
         cart.searchTitle("The Lion King");
         cart.searchTitle("jfgsjfjsfvs");
+
+        
 
     }
     

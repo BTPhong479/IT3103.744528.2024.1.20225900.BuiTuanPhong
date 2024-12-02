@@ -1,9 +1,9 @@
-package AimsProject.src.hust.soict.dsai.aims.cart.Cart;
+package hust.soict.dsai.aims.cart.Cart;
 
 import java.util.ArrayList;
 
-import AimsProject.src.hust.soict.dsai.aims.media.Media;
-import AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
+
 
 
 

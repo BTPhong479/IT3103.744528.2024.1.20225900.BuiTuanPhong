@@ -1,7 +1,7 @@
-package AimsProject.src.hust.soict.dsai.aims.store.Store;
+package hust.soict.dsai.aims.store.Store;
 
-import AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
-import AimsProject.src.hust.soict.dsai.aims.media.Media;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
 import java.util.ArrayList;
 
 
