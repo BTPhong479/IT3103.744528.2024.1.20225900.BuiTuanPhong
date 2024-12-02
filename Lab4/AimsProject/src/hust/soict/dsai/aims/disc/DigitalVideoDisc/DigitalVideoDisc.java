@@ -1,4 +1,4 @@
-package AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
+package hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 import hust.soict.dsai.aims.media.Disc;
 import hust.soict.dsai.aims.media.Playable;

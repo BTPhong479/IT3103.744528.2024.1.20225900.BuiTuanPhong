@@ -1,7 +1,7 @@
-package AimsProject.src.hust.soict.dsai.aims.Aims;
+package hust.soict.dsai.aims.Aims;
 
-import AimsProject.src.hust.soict.dsai.aims.cart.Cart.Cart;
-import AimsProject.src.hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+import hust.soict.dsai.aims.cart.Cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Playable;
 
 public class AimsProject{
