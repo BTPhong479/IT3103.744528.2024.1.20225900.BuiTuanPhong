@@ -11,6 +11,8 @@ public abstract class Media {
     private String title;
     private String category;
     private float cost;
+    private static int nbDigitalVideoDisc = 0;
+
     
     public Media(){
         
@@ -20,6 +22,8 @@ public abstract class Media {
     public Media(String title){
         
         this.title=title;
+        setId(nbDigitalVideoDisc);
+        nbDigitalVideoDisc++;
     }
 
 
@@ -27,6 +31,8 @@ public abstract class Media {
         this.title=title;
         this.category=category;
         this.cost=cost;
+        setId(nbDigitalVideoDisc);
+        nbDigitalVideoDisc++;
     }
 
     
@@ -55,14 +61,6 @@ public abstract class Media {
         return cost;
     }
 
-    public boolean equals(Opject o){
-        Media media = (Media) o;
-        try{
-            String title = media.getTitle();
-            return title.equals(this.getTitle());
-        }catch(NullPointerException e){
-            return false;
-        }
-    }
+    
     
 }

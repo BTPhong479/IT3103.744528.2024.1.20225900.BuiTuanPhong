@@ -1,5 +1,4 @@
 package hust.soict.dsai.aims.media;
-import hust.soict.dsai.aims.media.Playable;
 
 
 public class Track implements Playable{
@@ -25,10 +24,6 @@ public class Track implements Playable{
         System.out.println(("Track length: "+getLength()));
     }
 
-    public boolean equals(Opject o){
-        Track track = (Track) o;
-        return track.getTitle().equals(this.getTitle()) && track.getLength() == this.getLength();
-    }
-
+    
     
 }
