@@ -33,7 +33,7 @@ public class Book extends Media{
     }
 
     public String toString(){
-        return "Book - " +super.getTitle()+ " - "+ super.getCategory()+ ": "+ super.getCost()+"$";
+        return super.getId()+". Book - " +super.getTitle()+ " - "+ super.getCategory()+ ": "+ super.getCost()+"$";
     }
 
 

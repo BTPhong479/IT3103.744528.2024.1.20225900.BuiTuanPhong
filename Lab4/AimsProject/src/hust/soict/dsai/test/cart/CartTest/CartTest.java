@@ -46,6 +46,15 @@ public class CartTest {
         cart.searchId(2);
         cart.searchTitle("The Lion King");
         cart.searchTitle("jfgsjfjsfvs");
+        
+        cart.searchId(0);
+        cart.searchId(1);
+        cart.searchId(2);
+        cart.searchId(3);
+        cart.searchId(4);
+        cart.searchId(5);
+        cart.searchId(6);
+        cart.searchId(7);
 
         
 

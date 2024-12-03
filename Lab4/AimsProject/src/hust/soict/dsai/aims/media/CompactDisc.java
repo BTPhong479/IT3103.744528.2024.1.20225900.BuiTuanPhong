@@ -2,7 +2,6 @@ package hust.soict.dsai.aims.media;
 
 import java.util.ArrayList;
 import java.util.List;
-import hust.soict.dsai.aims.media.Playable;
 
 
 public class CompactDisc extends Disc implements Playable{
@@ -49,7 +48,7 @@ public class CompactDisc extends Disc implements Playable{
     }
 
     public String toString(){
-        return "CD - " +super.getTitle()+ " - "+ super.getCategory()+ " - "+ super.getDirector()+ " - "+ super.getLength()+ " - "+ getArtist()+": "+ super.getCost()+"$";
+        return super.getId()+". CD - " +super.getTitle()+ " - "+ super.getCategory()+ " - "+ super.getDirector()+ " - "+ super.getLength()+ " - "+ getArtist()+": "+ super.getCost()+"$";
     }
 
 

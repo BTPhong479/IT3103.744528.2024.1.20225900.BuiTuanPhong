@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims.cart.Cart;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import hust.soict.dsai.aims.media.Media;
 
@@ -53,13 +54,18 @@ public class Cart {
 
 
     public void searchId(int id){
+        int checkvar=1;
         for(Media item : itemsOrdered){
             if(item.getId()==id){
                 System.out.println(id + "."+ item.toString());
+                checkvar=0;
                 break;
             }
         }
+        if(checkvar==1) System.out.println("Khong co Media nao co ID tren!!!");
     }
+
+    
 
 
     public void searchTitle(String title){
@@ -72,6 +78,36 @@ public class Cart {
         }
         if(checkvar==1) System.out.println("Khong co Media nao giong ten!!!");
     }
+
+    public int numberMediaCurCart(){
+        return itemsOrdered.size();
+    }
+
+    public Media getMediaById(int id){
+        for(Media item : itemsOrdered){
+            if(item.getId()==id) {
+                
+                return item;
+            }
+        }
+        return null;       
+    }
+
+    public void placeOrdered(){
+        itemsOrdered.clear();
+    }
+
+    public void sortByTitle(){
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+        for(Media item : itemsOrdered) System.out.println(item.toString());
+    }
+
+    public void sortByCost(){
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+        for(Media item : itemsOrdered) System.out.println(item.toString());
+    }
+
+
     
 
 }
