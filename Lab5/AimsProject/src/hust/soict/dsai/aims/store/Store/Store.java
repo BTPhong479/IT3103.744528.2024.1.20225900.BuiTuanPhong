@@ -26,6 +26,10 @@ public class Store {
         }
     }
 
+    public ArrayList<Media> getItemsInStore(){
+        return itemsInStore;
+    }
+
     public void searchTitle(String title){
         int checkvar=1;
         for(Media item : itemsInStore){
