@@ -1,0 +1,82 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "type": "java",
+            "name": "Painter",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.javafx.Painter",
+            "projectName": "Lab5_9038a572",
+            "vmArgs": "--module-path C:/Users/UFO/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+            
+        },
+        {
+            "type": "java",
+            "name": "AimsProject",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.Aims.AimsProject",
+            "projectName": "Lab5_9038a572"
+        },
+        {
+            "type": "java",
+            "name": "AimsScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.screen.AimsScreen",
+            "projectName": "Lab5_9038a572",
+            
+        },
+        {
+            "type": "java",
+            "name": "AWTAccumulator",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.swing.AWTAccumulator",
+            "projectName": "Lab5_9038a572"
+        },
+        {
+            "type": "java",
+            "name": "NumberGrid",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.swing.NumberGrid",
+            "projectName": "Lab5_9038a572"
+        },
+        {
+            "type": "java",
+            "name": "SwingAccumulator",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.swing.SwingAccumulator",
+            "projectName": "Lab5_9038a572"
+        },
+        {
+            "type": "java",
+            "name": "CartTest",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.test.cart.CartTest.CartTest",
+            "projectName": "Lab5_9038a572"
+        },
+        {
+            "type": "java",
+            "name": "TestPassingParameter",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.test.disc.TestPassingParameter.TestPassingParameter",
+            "projectName": "Lab5_9038a572"
+        },
+        {
+            "type": "java",
+            "name": "StoreTest",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.test.store.StoreTest.StoreTest",
+            "projectName": "Lab5_9038a572"
+        }
+    ]
+}
