@@ -5,7 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         
-
+        {
+            "type": "java",
+            "name": "CartScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.screen.CartScreen",
+            "projectName": "Lab5_9038a572",
+            "vmArgs": "--module-path C:/Users/UFO/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics"
+        },
         {
             "type": "java",
             "name": "Painter",
@@ -19,7 +26,6 @@
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
-            
         },
         {
             "type": "java",
@@ -34,7 +40,11 @@
             "request": "launch",
             "mainClass": "hust.soict.dsai.aims.screen.AimsScreen",
             "projectName": "Lab5_9038a572",
-            
+            "vmArgs": "--module-path C:/Users/UFO/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml --add-exports javafx.base/com.sun.javafx.logging=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.embed=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.util=ALL-UNNAMED --add-exports javafx.graphics/com.sun.glass.ui=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.tk=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.cursor=ALL-UNNAMED"
+
+
+
+
         },
         {
             "type": "java",

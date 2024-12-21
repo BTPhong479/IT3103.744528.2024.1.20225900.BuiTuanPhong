@@ -1,11 +1,16 @@
 package hust.soict.dsai.aims.screen;
 
+import hust.soict.dsai.aims.cart.Cart.Cart;
 import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store.Store;
+import javafx.application.Platform;
 
 public class AimsScreen {
     public static void main(String args[]){
         Store store= new Store();
+        Cart cart = new Cart();
+
+
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
         store.addMedia(dvd1);
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star War", "Science Fiction", "George Lucas", 87, 24.95f);
@@ -20,7 +25,13 @@ public class AimsScreen {
         store.addMedia(dvd6);
         System.out.println(store.getItemsInStore());
 
-        new StoreScreen(store);
+        cart.addMedia(dvd6);
+        cart.addMedia(dvd1);
+
+        //new StoreScreen(store);
+        new CartScreen(cart);
+        
+
 
         
         
