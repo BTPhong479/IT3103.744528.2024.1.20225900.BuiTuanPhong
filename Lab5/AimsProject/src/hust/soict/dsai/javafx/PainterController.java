@@ -5,14 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class PainterController {
 
-        private boolean write = true;
-@FXML
+    private boolean write = true;
+
+    @FXML
     private Pane drawingAreaPane;
 
     @FXML
