@@ -1,12 +1,15 @@
 package hust.soict.dsai.aims.screen;
 
+import javax.naming.LimitExceededException;
+
 import hust.soict.dsai.aims.cart.Cart.Cart;
 import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store.Store;
-import javafx.application.Platform;
 
 public class AimsScreen {
     public static void main(String args[]){
+
+        
         Store store= new Store();
         Cart cart = new Cart();
 
@@ -25,15 +28,21 @@ public class AimsScreen {
         store.addMedia(dvd6);
         System.out.println(store.getItemsInStore());
 
+        try{
         cart.addMedia(dvd6);
         cart.addMedia(dvd1);
+        }catch(LimitExceededException e){
+            System.out.println(e.getMessage());
+        }
 
-        //new StoreScreen(store);
+        
         new CartScreen(cart);
+        new StoreScreen(store,cart);
+        
         
 
 
-        
+    
         
     }
 

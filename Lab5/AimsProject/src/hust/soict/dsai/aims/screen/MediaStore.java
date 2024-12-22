@@ -6,12 +6,14 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.naming.LimitExceededException;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import hust.soict.dsai.aims.cart.Cart.Cart;
@@ -22,9 +24,12 @@ public class MediaStore extends JPanel{
     private JButton btnAddToCart, btnPlay;
     private Media media;
     private Cart cart;
+    
+
     public MediaStore(Media media, Cart cart){
 
         ButtonListener btnListener =  new ButtonListener();
+        
         this.media=media;
         this.cart=cart;
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -64,7 +69,13 @@ public class MediaStore extends JPanel{
         public void actionPerformed(ActionEvent e){
             String button = e.getActionCommand();
             if(button.equals("Add to cart")){
+                try{
                 cart.addMedia(media);
+                }catch(LimitExceededException ex){
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    
+                }
+                
             }
             if(button.equals("Play")){
                 JDialog dialog = new JDialog();
