@@ -75,7 +75,10 @@ public class CartScreenController {
         colMediaCost.setCellValueFactory(new PropertyValueFactory<Media, Float>("cost"));
         colMediaTitle.setCellValueFactory(new PropertyValueFactory<Media, String>("title"));
         colMediacategory.setCellValueFactory(new PropertyValueFactory<Media, String>("category"));
+        
         tblMedia.setItems(this.cart.getItemsOrdered());
+            
+    
 
         btnPlay.setVisible(false);
         btnRemove.setVisible(false);
@@ -159,9 +162,32 @@ public class CartScreenController {
 	    tblMedia.setItems(filteredItems);
 	}
 
+    @FXML
+    void btnPlaceOrder(ActionEvent event){
+        JDialog dialog = new JDialog();
+        dialog.setTitle("TOTAL AMOUNT ");
+        dialog.setSize(500,100);
+        dialog.setLayout(new FlowLayout());
+
+        JLabel label = new JLabel("total amount is:  " + String.format("%.2f", cart.totalCost()) + " $");
+        dialog.add(label);
+
+        dialog.setLocationRelativeTo(null);
+
+        dialog.setVisible(true);
+
+        cart.placeOrdered();
+        
+        tblMedia.getItems().clear();
+    }
+
     private void updateTotalCost() {
 		Platform.runLater(() -> {
 	        totalCost.setText(String.format("%.2f", cart.totalCost()) + " $");
 	    });
 	}
+
+    public void updateTableView(){
+        tblMedia.setItems(cart.getItemsOrdered());
+    }
 }

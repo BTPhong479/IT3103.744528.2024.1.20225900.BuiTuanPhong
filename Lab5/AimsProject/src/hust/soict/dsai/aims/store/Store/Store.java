@@ -4,11 +4,14 @@ import hust.soict.dsai.aims.media.Media;
 import java.util.ArrayList;
 
 
+
 public class Store {
 
+    
     private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
-    public void addMedia(Media media){
+    public void addMedia(Media media) {
+
         itemsInStore.add(media);
         System.out.println("Da them vao cua hang!!!");
     }
